@@ -13,7 +13,6 @@ from mpl_toolkits.mplot3d import Axes3D
 import scipy.stats as stats
 from functools import partial
 
-
 # =============================================================================
 # Bayesian Data Analysis
 # 
