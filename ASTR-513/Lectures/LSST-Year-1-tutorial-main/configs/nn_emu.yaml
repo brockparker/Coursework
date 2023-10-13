@@ -1,0 +1,28 @@
+io:
+    savedir: output/nn_emu/ 
+    cosmology_yaml_file: configs/cocoa_configs/MCMC_W_BARYONS.yaml
+    cocoa_yaml_file: configs/cocoa_configs/params_cosmo_ia_dz.yaml
+
+data:
+    cov: data/lsst_y1/cov_lsst_y1
+    dv: data/lsst_y1/lsst_y1_data_fid
+    dv_fid: data/lsst_y1/lsst_y1_data_fid
+    scalecut_mask: data/lsst_y1/lsst_3x2.mask
+    bias_mask: data/lsst_y1/bias_mask.npy
+    shear_calib_mask: data/lsst_y1/shear_calib_mask.npy
+    baryon_pca: data/lsst_y1/pca.txt
+
+lhs:
+    N_samples: 9600
+    
+emulator:
+    CHI_SQ_CUT: 8e+4
+    emu_type: nn
+    N_resample: 9600
+    batch_size: 16
+    n_epochs: 100
+    
+sampling:
+    N_MCMC: 1000
+    N_BURNIN: 500
+    N_WALKERS: 96
