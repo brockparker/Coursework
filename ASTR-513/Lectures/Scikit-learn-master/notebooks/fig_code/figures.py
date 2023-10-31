@@ -119,7 +119,7 @@ def plot_tree_interactive(X, y):
 def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
     from ipywidgets import interact
     from sklearn.metrics.pairwise import euclidean_distances
-    from sklearn.datasets.samples_generator import make_blobs
+    from sklearn.datasets import make_blobs
 
     with warnings.catch_warnings():
         warnings.filterwarnings('ignore')
@@ -179,7 +179,7 @@ def plot_kmeans_interactive(min_clusters=1, max_clusters=6):
 
     
     return interact(_kmeans_step, frame=(0, 50),
-                    n_clusters=[min_clusters, max_clusters])
+                    n_clusters=(min_clusters, max_clusters))
 
 
 def plot_image_components(x, coefficients=None, mean=0, components=None,
