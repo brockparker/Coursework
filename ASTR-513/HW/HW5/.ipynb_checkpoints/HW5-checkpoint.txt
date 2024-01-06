@@ -1,0 +1,5 @@
+https://ui.adsabs.harvard.edu/abs/2023arXiv231013543T/abstract
+
+This paper uses vision transformers to analyize and detect low surface brightness galaxies in the upcoming LSST data. They train the transformer ensemble on DES data, and have an identification accuracy of 94%. They test both a traditional transformer and a vision transformer for identifying LSBG, and find the combination of the two resultsin the most accurate classification.
+
+One other application of vision transformers slightly more applicable to my work is "goodness" ratings of calibration images. Most observers manually inspect calibration images to selectivley remove contaminated images. However, a vision transformer could easily be trained with the thousands or tens of thousands of known good calibration images from any major observatory. This transformer would then provide a rating describing how good the images are, and apply an automatic cutoff, resulting in only quality calibration images being given to an observer. The same could easily be applied to CCD characterization, and warnings could be thrown whenever bad images appear.
